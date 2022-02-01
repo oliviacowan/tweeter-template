@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+nav {
+  height: 120;
+  width: auto;
+  background-color: #4056A1 ;
+  color: #FFFFFF;
+  padding: 1.5em;
+  font-family: 'Bungee', sans-serif;
+}
+
+
+
+i {
+  color: red;
+}

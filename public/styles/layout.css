@@ -14,10 +14,52 @@ html {
  * Global layout stuff
  */
 
+
+
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+}
+
+.navcontainer {
+  display:flex;
+  justify-content: space-between;
+}
+
+.navtitle {
+  display:flex;
+}
+
+.navnewtweet {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  background-color: #f4f1ec;
+}
+
+/* .container {
+  width: 90%;
+} */
+.body {
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  align-items: center;
+}
+.container {
+  margin: 5%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /* align-self: center;
+  flex-grow: 9; */
+  /* width: 80%; */
 }
 
 /*

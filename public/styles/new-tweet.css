@@ -1,0 +1,34 @@
+
+section {
+  font-family: 'Source Sans Pro 600', sans-serif;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+textarea {
+  font-family: 'Bungee', sans-serif;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  width: 800px;
+}
+.tweetandcount {
+  font-family: 'Bungee', sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  color: #f4f1ec;
+  background-color: #4056A1 ;
+}
+
+textarea {
+  /* background-color: #f4f1ec; */
+  border-bottom: #545149;
+  
+  
+  /* color: #f4f1ec; */
+  /* border: gold; */
+}
