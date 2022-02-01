@@ -3,15 +3,20 @@ section {
   font-family: 'Source Sans Pro 600', sans-serif;
   display: flex;
   /* align-items: center; */
+  flex-direction: column;
   justify-content: center;
 }
 
 textarea {
-  font-family: 'Bungee', sans-serif;
+  font-family: 'Source Sans Pro 600', sans-serif;
+  color: #545149;
   display: flex;
+  margin: 10px;
   justify-content: center;
-  /* align-items: center; */
   width: 800px;
+  border: hidden;
+  background-color: #f4f1ec;
+  border-bottom-style: solid;
 }
 .tweetandcount {
   font-family: 'Bungee', sans-serif;
@@ -21,14 +26,8 @@ textarea {
 
 button {
   color: #f4f1ec;
-  background-color: #4056A1 ;
+  background-color: #4056A1;
+  border: hidden;
 }
 
-textarea {
-  /* background-color: #f4f1ec; */
-  border-bottom: #545149;
-  
-  
-  /* color: #f4f1ec; */
-  /* border: gold; */
-}
+
