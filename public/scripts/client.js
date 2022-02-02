@@ -75,19 +75,25 @@ $(() => {
       console.log('tweet: ', tweet);
     })
     return;
-    // for (const tweet of tweets) {
-    //   const createdTweet = createTweetElement(tweet);
-    // $('.tweetcontainer').append(createdTweet);
-    //}
-    //return;
-
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
   }
   renderTweets(data);
+
+
+  $("#submit-form").on('submit', function(event) {
+    event.preventDefault();
+    console.log('entered')
+    //console.log(this);
+    const data = $(this).serialize();
+    console.log('data', data)
+
+    $.ajax({
+      method: 'POST',
+      url: '/tweets',
+      data: data
+    }).then(()=>{
+      console.log('success');
+    })
+  });
 })
 
 
-//const $tweet = createTweetElement(tweetData);
-//console.log($tweet);

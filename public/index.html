@@ -63,11 +63,11 @@
   <main class="container">
     <section class="mainbody">
       
-      <form action="/tweets" method="POST">
+      <form action="/tweets" method="POST" id="submit-form">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
         <div class=tweetandcount>
-          <button type="submit" value="submit">Tweet</button>
+          <button type="submit" value="submit" class="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
