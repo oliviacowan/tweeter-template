@@ -1,6 +1,6 @@
 
 
-.tweetcontainer {
+.hardcodedtweet {
   padding: 1.5em;
   margin-top: 1em;
   outline: auto;
@@ -9,7 +9,7 @@
   transition: 0.5s;
 }
 
-.tweetcontainer:hover {
+.hardcodedtweet:hover {
   box-shadow: 5px 10px 18px #4056A1;
 }
 
@@ -59,6 +59,7 @@
 
 .tinypic {
   width: 4em;
+  margin-right: 1em;
   display: flex;
   align-items: flex-start;
 }

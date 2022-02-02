@@ -11,7 +11,8 @@
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -60,7 +61,7 @@
   
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <section class="new-tweet">
+    <section class="mainbody">
       
       <form action="/tweets" method="POST">
         <label for="tweet-text">What are you humming about?</label>
@@ -72,32 +73,6 @@
       </form>
       <article>
         <div class="tweetcontainer">
-          <header class="tweeterperson">
-            <div class="namepic">
-              <img class="tinypic" src="/images/profile-hex.png">
-              <p>Camila Capybara</p>
-            </div>
-            <p>@therodentcamila</p>
-          </header>
-          <div class="message">
-            <p>Hellooooo</p>
-          </div>
-          <footer class="tweetfooter">
-            <div class="timeago">
-              <p>-- days ago</p>
-            </div>
-            <div class="footericons">
-              <div class="icon1 icon">
-                <p><i class="fa-solid fa-flag"></i></p>
-              </div>
-              <div class="icon2 icon">
-                <p><i class="fa-solid fa-retweet"></i></p>
-              </div>
-              <div class="icon3 icon">
-                <p><i class="fa-solid fa-heart"></i></p>
-              </div>
-            </div>
-          </footer>
         </div>
       </article>
     </section>
