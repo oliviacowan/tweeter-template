@@ -6,12 +6,16 @@ html {
 }
 
 .navcontainer {
-  height: 120;
-  width: auto;
+  display:flex;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the bottom of the page */
+  width: 100vw; /* Full width */
+  height: 120px;
   background-color: #4056A1 ;
   color: #FFFFFF;
   padding: 1.5em;
   font-family: 'Bungee', sans-serif;
+  justify-content: space-between;
 }
 
 .navtitle {
@@ -21,4 +25,9 @@ html {
 
 .doublearrow {
   color: red;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }

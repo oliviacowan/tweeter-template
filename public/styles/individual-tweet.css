@@ -2,7 +2,7 @@
 
 .tweetcontainer {
   padding: 1.5em;
-  margin-top: 2cm;
+  margin-top: 1em;
   outline: auto;
   display: flex;
   flex-direction: column;
@@ -29,10 +29,11 @@
 }
 
 .tweetfooter {
-  width: 100%;
+  font-size: 18px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex: 1;
 }
 
 .footericons {
@@ -41,19 +42,23 @@
   flex-direction: row;
   justify-content: space-around;
 }
+/* .timeago {
+  font-size: 20px;
+} */
 
-.icon1:hover {
-  color: orangered;
+/* .footericons {
+  width: 10%
+} */
+.icon {
+  margin-left: 5px;
+  margin-right: 5px;
 }
-.icon2:hover {
-  color: orangered;
-}
-.icon3:hover {
-  color: orangered;
+.icon:hover{
+  color: orangered; 
 }
 
 .tinypic {
-  width: 3cm;
+  width: 4em;
   display: flex;
   align-items: flex-start;
 }
