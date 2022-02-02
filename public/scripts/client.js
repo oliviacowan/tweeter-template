@@ -45,8 +45,8 @@ $(() => {
 
     tweets.forEach(tweet => {
       const createdTweet = createTweetElement(tweet);
-      $('.tweetcontainer').append(createdTweet);
-      console.log('tweet: ', tweet);
+      $('.tweetcontainer').prepend(createdTweet);
+      //console.log('tweet: ', tweet);
     })
     return;
   }
@@ -65,9 +65,21 @@ $(() => {
 
   $("#submit-form").on('submit', function(event) {
     event.preventDefault();
-    //console.log('entered')
+   // console.log('entered')
+  
+   const characterLength = $('#tweet-text').val().length;
+   if (!characterLength) {
+     alert('empty text field');
+     return;
+   }
+   if (characterLength > 140) {
+     alert('Your tweet is longer than 140 characters');
+     return;
+   }
+
     const data = $(this).serialize();
-    console.log('data', data)
+    
+    //console.log('data', data)
     $('form').trigger('reset');
     
     $.ajax({
