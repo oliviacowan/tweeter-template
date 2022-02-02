@@ -1,14 +1,13 @@
 
-header {
+.profile {
   background-color: #858fd6;
 background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
-.profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 h2 {
   color:#FFFFFF;
   font-family: 'Source Sans Pro', sans-serif;

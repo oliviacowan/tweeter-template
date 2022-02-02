@@ -5,7 +5,7 @@ html {
   box-sizing: inherit;
 }
 
-nav {
+.navcontainer {
   height: 120;
   width: auto;
   background-color: #4056A1 ;
@@ -14,8 +14,11 @@ nav {
   font-family: 'Bungee', sans-serif;
 }
 
+.navtitle {
+  font-size: 200%;
+}
 
 
-i {
+.doublearrow {
   color: red;
 }
