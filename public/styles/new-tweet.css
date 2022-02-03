@@ -11,7 +11,7 @@ textarea {
   font-family: 'Source Sans Pro 600', sans-serif;
   color: #545149;
   display: flex;
-  margin: 10px;
+  margin: .75em;
   justify-content: center;
   width: 1100px;
   border: hidden;
@@ -30,4 +30,19 @@ button {
   border: hidden;
 }
 
+.error {
+  display: flex;
+  flex-direction: row;
+  color: red;
+  min-height: 1rem;
+  /* display: none; */
+  
+  /* border: red, solid */
 
+}
+#error-message {
+  margin: .75em;
+  display: flex;
+  align-items: center;
+  
+}
