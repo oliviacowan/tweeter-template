@@ -36,8 +36,6 @@ html {
   font-size: 1.1em;
   border: none;
   border-bottom-style: solid;
-  display: flex;
-  flex-wrap: wrap
 }
 
 .tweetfooter {

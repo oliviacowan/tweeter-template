@@ -56,7 +56,7 @@ $(() => {
       url: '/tweets',
       method: 'GET'
     }).then((tweets) => {
-      $('#tweet-timeline').empty();
+      $('#tweet-input').empty();
       renderTweets(tweets);
     });
   };
@@ -64,7 +64,7 @@ $(() => {
 
   $("#submit-form").on('submit', function (event) {
     event.preventDefault();
-    const characterLength = $('#tweet-text').val().length;
+    const characterLength = $('#tweet-input').val().length;
 
     const displayError = function (error) {
       const markup = `

@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-  const $inputForm = $('#tweet-text');
+  const $inputForm = $('#tweet-input');
   let charactersRemaining = 140;
 
 
