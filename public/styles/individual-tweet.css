@@ -1,7 +1,15 @@
+html {
+  box-sizing: border-box;
+}
 
 
-.hardcodedtweet {
-  padding: 1.5em;
+#tweet-timeline {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.each-tweet {
+  padding: 1em;
   margin-top: 1em;
   outline: auto;
   display: flex;
@@ -9,27 +17,31 @@
   transition: 0.5s;
 }
 
-.hardcodedtweet:hover {
+.each-tweet:hover {
   box-shadow: 5px 10px 18px #4056A1;
 }
 
-.namepic {
+.name-pic {
   display: flex;
   flex-direction: row;  
 }
 
-.tweeterperson {
+.name-handle-pic{
   display: flex;
   justify-content: space-between;
+  font-size: 1em;
 }
 
 .message {
+  font-size: 1.1em;
   border: none;
   border-bottom-style: solid;
+  display: flex;
+  flex-wrap: wrap
 }
 
 .tweetfooter {
-  font-size: 18px;
+  font-size: .75em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -46,10 +58,7 @@
 .footericons {
   width: 10%
 }
-/* .icon {
-  margin-left: 5px;
-  margin-right: 5px;
-} */
+
 .icon:hover{
   color: orangered; 
 }
@@ -57,6 +66,4 @@
 .tinypic {
   width: 4em;
   margin-right: 1em;
-  display: flex;
-  align-items: flex-start;
 }

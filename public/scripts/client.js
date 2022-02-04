@@ -1,11 +1,7 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+
 
 $(() => {
-
+  /*------ to sanitize input ------*/
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -13,11 +9,10 @@ $(() => {
   };
 
   const createTweetElement = function (data) {
-
     const $tweet = $(`
-        <div class="hardcodedtweet">
-            <header class="tweeterperson">
-              <div class="namepic">
+        <div class="each-tweet">
+            <header class="name-handle-pic">
+              <div class="name-pic">
                 <img class="tinypic" src=${escape(data.user.avatars)}/>
                 <p>${escape(data.user.name)}</p>
               </div>
@@ -45,61 +40,56 @@ $(() => {
             </div>
           `);
     return $tweet;
-  }
+  };
 
   const renderTweets = function (tweets) {
-
     tweets.forEach(tweet => {
       const createdTweet = createTweetElement(tweet);
-      $('.tweetcontainer').prepend(createdTweet);
-      //console.log('tweet: ', tweet);
-    })
+      $('#tweet-timeline').append(createdTweet);
+    });
     return;
-  }
+  };
+
 
   const loadNewTweets = function () {
     $.ajax({
       url: '/tweets',
       method: 'GET'
     }).then((tweets) => {
-      $('.tweetcontainer').empty();
-      //console.log('tweeeets', tweets);
+      $('#tweet-timeline').empty();
       renderTweets(tweets);
-    })
-  }
+    });
+  };
 
 
   $("#submit-form").on('submit', function (event) {
     event.preventDefault();
     const characterLength = $('#tweet-text').val().length;
-    
-    const displayError = function(error) {
-      // console.log($('.error').is(':empty'))
 
+    const displayError = function (error) {
       const markup = `
      <p><i class="fas fa-exclamation-triangle"></i></p>
      <p id="error-message">${escape(error)}</p>
      <p><i class="fas fa-exclamation-triangle"></i></p>
-     `
-     
-     if (!$('.error').is(':empty')) {
-       $('.error').html(markup);
-       return;
+     `;
+
+      if (!$('.error').is(':empty')) {
+        $('.error').html(markup);
+        return;
       }
       $(markup).appendTo($('.error')).hide().slideDown('slow');
-    }
+    };
 
     if (!characterLength) {
-      
       const emptyError = 'Please enter a tweet to continue';
       displayError(emptyError);
-      
       return;
-    } else  if (characterLength > 140) {
+
+    } else if (characterLength > 140) {
       const OverLimitError = 'You have exceeded the 140 character limit';
       displayError(OverLimitError);
-      
       return;
+
     } else {
       const data = $(this).serialize();
       $('form').trigger('reset');
@@ -107,7 +97,7 @@ $(() => {
 
       $('.error').slideUp(500, () => {
         $('.error').empty().show();
-      })
+      });
 
       $.ajax({
         method: 'POST',
@@ -115,9 +105,10 @@ $(() => {
         data: data
       }).then(() => {
         loadNewTweets();
-      })
+      });
     }
   });
-})
+  loadNewTweets();
+});
 
 

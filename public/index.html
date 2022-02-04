@@ -11,8 +11,10 @@
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -35,50 +37,53 @@
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  
+
 </head>
 
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
     <div class="navcontainer">
-      <div class="navtitle"><span>tweeter</span></div>
-      <div class="navnewtweet">
+      <div class="nav-title"><span>tweeter</span></div>
+      <div class="nav-write-new-tweet">
         <span><strong>Write </strong>a new tweet</span>
-        <div class="doublearrow"><i class="fa-solid fa-angles-down"></i></div>
+        <button type="submit" value="submit" class="doublearrow">
+          <i class="fa-solid fa-angles-down"></i>
+        </button>
       </div>
     </div>
   </nav>
-  <section class="profile">
-    <div>
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div>
-      <h2><strong>Camila </strong>Capybara</h2>
-    </div>
-  </section>
-  
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="mainbody">
-      
-      <div class="error"></div>
-      
-      <form action="/tweets" method="POST" id="submit-form">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div class=tweetandcount>
-          <button type="submit" value="submit" class="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
-      </form>
-      <article>
-        <div class="tweetcontainer">
-        </div>
-      </article>
+  <div class="profile-timeline">
+    <section class="profile">
+      <div>
+        <img class="profile-pic" src="/images/profile-hex.png">
+      </div>
+      <br>
+      <div>
+        <h2 class="user-name">Camila Capybara</h2>
+      </div>
     </section>
-  </main>
+
+    <!-- Page-specific (main) content here -->
+
+    <main class="container">
+      <section class="mainbody">
+        <div class="error"></div>
+        <form action="/tweets" method="POST" id="submit-form">
+          <label for="tweet-input">What are you humming about?</label>
+          <textarea name="text" id="tweet-input"></textarea>
+          <div class="tweetbtn-and-counter">
+            <button type="submit" value="submit" class="tweet">Tweet</button>
+            <output name="counter" class="counter" for="tweet-input">140</output>
+          </div>
+        </form>
+        <article>
+          <div id="tweet-timeline">
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>

@@ -1,48 +1,44 @@
 
-section {
-  font-family: 'Source Sans Pro 600', sans-serif;
-  display: flex;
-  /* align-items: center; */
+
+/*------ new-tweet form styling ------*/
+#submit-form {
   flex-direction: column;
-  justify-content: center;
+  padding-bottom: 3%;
 }
 
-textarea {
+#tweet-input {
   font-family: 'Source Sans Pro 600', sans-serif;
   color: #545149;
-  display: flex;
-  margin: .75em;
-  justify-content: center;
-  width: 1100px;
-  border: hidden;
+  margin: .5em 0 .5em 0; 
+  border: none;
+  border-bottom: 3px solid #545149;
+  width: 100%;
   background-color: #f4f1ec;
-  border-bottom-style: solid;
 }
-.tweetandcount {
+
+.tweetbtn-and-counter {
   font-family: 'Bungee', sans-serif;
   display: flex;
   justify-content: space-between;
 }
 
-button {
+button.tweet {
   color: #f4f1ec;
   background-color: #4056A1;
   border: hidden;
 }
 
+
+/*------ form errors styling ------*/
 .error {
   display: flex;
   flex-direction: row;
   color: red;
   min-height: 1rem;
-  /* display: none; */
-  
-  /* border: red, solid */
-
 }
+
 #error-message {
   margin: .75em;
   display: flex;
   align-items: center;
-  
 }
