@@ -16,6 +16,9 @@
   background-color: #f4f1ec;
   
 }
+.each-tweet .message {
+  word-break: break-all;
+}
 
 .tweetbtn-and-counter {
   font-family: 'Bungee', sans-serif;
