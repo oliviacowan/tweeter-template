@@ -11,3 +11,9 @@ The final product has a character counter, warning errors, and responsive design
 ![The functionality of the character counter when writing a tweet: ](https://github.com/oliviacowan/tweeter-template/blob/master/docs/new-tweet.png?raw=true)
 
 ![The web app from a mobile device perspective, along with the error warning for exceeding the character limit:](https://github.com/oliviacowan/tweeter-template/blob/master/docs/mobile-device.png?raw=true)
+
+
+## Getting Started
+
+- Install all dependencies (using the `npm install` command).
+- Run the development web server using the `npm run local` command.
