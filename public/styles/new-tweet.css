@@ -4,6 +4,8 @@
 #submit-form {
   flex-direction: column;
   padding-bottom: 3%;
+  /* display: hidden; */
+  display: none;
 }
 
 #tweet-input {
@@ -14,6 +16,7 @@
   border-bottom: 3px solid #545149;
   width: 100%;
   background-color: #f4f1ec;
+  
   
 }
 .each-tweet .message {
@@ -27,6 +30,7 @@
 }
 
 button.tweet {
+  cursor: pointer;
   color: #f4f1ec;
   background-color: #4056A1;
   border: hidden;

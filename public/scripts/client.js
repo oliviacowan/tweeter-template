@@ -61,11 +61,12 @@ $(() => {
     });
   };
 
-
+  
   $("#submit-form").on('submit', function (event) {
     event.preventDefault();
     const characterLength = $('#tweet-input').val().length;
 
+    /*------ error message ------*/
     const displayError = function (error) {
       const markup = `
      <p><i class="fas fa-exclamation-triangle"></i></p>
@@ -89,7 +90,8 @@ $(() => {
       const OverLimitError = 'You have exceeded the 140 character limit';
       displayError(OverLimitError);
       return;
-
+      
+      /*------ hides error message once resolved ------*/
     } else {
       const data = $(this).serialize();
       $('form').trigger('reset');
@@ -109,6 +111,40 @@ $(() => {
     }
   });
   loadNewTweets();
+
+  /*------ write new tweet toggle  ------*/
+  $('.doublearrow').on('click', function(event) {
+    event.preventDefault();
+
+    const writeTweet = $('#submit-form')
+
+    if ($(writeTweet).is(':hidden')) {
+      $(writeTweet).slideDown('slow', function(){
+        $('#tweet-input').focus()
+      });
+   
+    } else {
+      $(writeTweet).show().slideUp('slow');
+    }
+    
+  });
+
+  /*------ scroll to top toggle ------*/
+  $(window).on('scroll', function() {
+    const scroll = $(this).scrollTop();
+    
+    if (scroll < 200) {
+      $('.scroll-arrow').hide()
+    } else {
+      $('.scroll-arrow').show()
+    }
+  })
+
+  $('.scroll-arrow').on('click', function(event) {
+    event.preventDefault();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  })
+  
 });
 
 

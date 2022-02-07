@@ -3,7 +3,7 @@
 Tweeter is a simple, single-page Twitter-like web app.
 
 ## Final product
-The final product has a character counter, warning errors, and responsive design. It is built with ajax for a smooth user experience, along with jQuery.
+The final product has a character counter, warning errors, and responsive design, it also has a toggle which can be clicked to write a new tweet, and one that can be clicked to bring the user back to the top of the page when scrolling. It is built with ajax for a smooth user experience, along with jQuery.
 
 ## Screenshots
 ![The desktop view of the timeline and profile:](https://github.com/oliviacowan/tweeter-template/blob/master/docs/timeline-hover.png?raw=true)

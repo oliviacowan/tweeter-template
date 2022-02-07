@@ -25,14 +25,34 @@ body {
   background-color: #f4f1ec;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
+  
 }
 
 .mainbody {
   font-family: 'Source Sans Pro 600', sans-serif;
   width: 100%;
   padding: 8%;
+}
+
+.scroll-arrow {
+  width: 4rem;
+  border-radius: 50%;
+  padding: 18px 1px 18px 1px;
+  color: white;
+  background-color: red;
+  border: none;
+  justify-content: center;
+}
+.scroll-arrow {
+  /* align-self: flex-end; */
+  margin: 1em;
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
 
 /*------ for responsive design ------*/
