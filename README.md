@@ -11,7 +11,7 @@ The final product has a character counter, warning errors, and responsive design
 
 ![The web app from a mobile device perspective, along with the error warning for exceeding the character limit:](https://github.com/oliviacowan/tweeter-template/blob/master/docs/mobile-device.png?raw=true)
 
-![The toggle in the mobile view, to scroll to the top](https://github.com/oliviacowan/tweeter-template/blob/master/docs/timeline-hover.png?raw=true)
+![The toggle in the mobile view, to scroll to the top](https://raw.githubusercontent.com/oliviacowan/tweeter-template/b8388f9c81627d3c0a2ebb057cfcfb3195fad19c/docs/scroll-toggle.png)
 
 ## Getting Started
 
