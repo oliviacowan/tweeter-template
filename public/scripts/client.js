@@ -106,6 +106,7 @@ $(() => {
         url: '/tweets',
         data: data
       }).then(() => {
+        $('#tweet-timeline').empty();
         loadNewTweets();
       });
     }
